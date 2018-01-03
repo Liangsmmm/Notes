@@ -23,6 +23,7 @@ woui
     $ git config --global core.editor vim
     $ git config --global user.name liangsm
     $ git config --global user.mail 5XXXXXX@qq.com
+    $ git config --global --list（查看）
 
 
     # 初始化建立git仓库
@@ -32,10 +33,31 @@ woui
     # 查看此时git repository的状态
     $ git status
 
-
     # 使用git追踪当前的目录下的文件
     $ git add -A (或者 git add .)
 
+    # 不追踪当前的目录下的文件（可先建立.gitignore后add）
+    $ git rm --cached . -r(不追踪所有文件，可替换为某个文件)
+    $ git
+
+    # 从阶段2恢复文件
+    $ git checkout -- sogou小鹤.ini
+
+    # 使用git提交当前的目录下的文件
+    $ git commit -m "2018-1-3 22:43:22，i think all is perfect" 
+
+    # 使用commit完全、直接再现恢复目录下的文件，略过statge
+    $ git reset --hard 节点号 （git reflog）
+
+    # 使用commit完全再现某个文件，恢复到了stage区
+    $ git reset 56e6b80953 sogou小鹤.ini
+    $ git checkout -- sogou小鹤.ini 
 
 
-    ```
+    # 查看提交log
+    $ git reflog (最详细的修改操作记录)
+    $ git log --pretty=short
+    $ git log --pretty=fuller (最详细的日志记录)
+    $ git log --pretty=oneline
+    
+     ```
