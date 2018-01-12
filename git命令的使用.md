@@ -14,7 +14,7 @@
         - untrack --（git add）-> statge --（git commit）-> commit
         - untrack <--（git checkout）- statge <--（git reset)- commit
 
-woui
+
 - git的命令行使用方法
     - 
     ```shell
@@ -61,12 +61,15 @@ woui
     $ git log --pretty=oneline
     
 
-    如果你的仓库有东西并且和你要上传的本地git仓库不一致，会提示先pull再push
-    hint 的意思“”提示“”
-    e.g 这个你应该知道：example
-    git pull [远程仓库名] [本地仓库名]
-    PS：当你的仓库唯一的时候默认可以直接git pull。仓库唯一的意思是git remote show唯一
-    git push -u [本地仓库名] [远程仓库名]
+    # 如果你的仓库有东西并且和你要上传的本地git仓库不一致，会提示先pull再push
+    $ git pull [远程仓库名] [本地仓库名]
+    PS：当你的仓库唯一的时候默认可以直接git pull。仓库唯一的意思是git remote show唯一,一般把远程起名叫做 origin 
 
-    一般把远程起名叫做 origin 
+    # 上传本地分支到远程分支
+    $ git push -u [本地仓库名] [远程仓库名]
+
+    # 查看所拥有的远程仓库
+    $ git remote -v
+
+    $ git pull origin master --allow-unrelated-histories
      ```
