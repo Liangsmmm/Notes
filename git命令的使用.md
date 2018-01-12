@@ -60,4 +60,13 @@ woui
     $ git log --pretty=fuller (最详细的日志记录)
     $ git log --pretty=oneline
     
+
+    如果你的仓库有东西并且和你要上传的本地git仓库不一致，会提示先pull再push
+    hint 的意思“”提示“”
+    e.g 这个你应该知道：example
+    git pull [远程仓库名] [本地仓库名]
+    PS：当你的仓库唯一的时候默认可以直接git pull。仓库唯一的意思是git remote show唯一
+    git push -u [本地仓库名] [远程仓库名]
+
+    一般把远程起名叫做 origin 
      ```
