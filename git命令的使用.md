@@ -66,7 +66,7 @@
     PS：当你的仓库唯一的时候默认可以直接git pull。仓库唯一的意思是git remote show唯一,一般把远程起名叫做 origin 
 
     # 上传本地分支到远程分支
-    $ git push -u [本地仓库名] [远程仓库名]
+    $ git push -u  [远程仓库名] [本地仓库名]
 
     # 查看所拥有的远程仓库
     $ git remote -v
