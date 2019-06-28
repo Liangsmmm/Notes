@@ -1,0 +1,40 @@
+1. 添加ssh
+   ssh-keygen -t rsa -b 4096 -C "596929003@qq.com"
+   a. Enter
+   b. password
+   c. password
+   返回：
+       Generating public/private rsa key pair.
+       Enter file in which to save the key (/root/.ssh/id_rsa): 
+       Created directory '/root/.ssh'.
+       Enter passphrase (empty for no passphrase): 
+       Enter same passphrase again: 
+       Your identification has been saved in /root/.ssh/id_rsa.
+       Your public key has been saved in /root/.ssh/id_rsa.pub.
+       The key fingerprint is:
+       ....................
+
+    命令行输入：
+    * eval "$(ssh-agent -s)"
+      返回一个Agent pid
+    * ssh-add /root/.ssh/id_rsa
+
+
+
+
+    在/root/.ssh/id_rsa.pub中获取公钥
+    然后，添加到git帐号内的ssh。
+
+2. git config --global user......
+3. push
+   git init
+   git add .
+   git status
+   git commit -m "name"      (milestone)
+   git reflog
+   git remote add origin https://github.com/Liangsmmm/picture_redis.git
+   git pull origin master
+   git push -u origin master  (会要求输入git用户名和密码)
+
+   
+   
